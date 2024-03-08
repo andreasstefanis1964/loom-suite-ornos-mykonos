@@ -53,7 +53,7 @@
     "imageResize": true,
     "usedWebp": true,
     "favicon": false,
-    "mbrsiteDomain": "jgg9yzhamm",
+    "mbrsiteDomain": "papfer8cfj",
     "robotsSwitcher": false,
     "sitemapSwitcher": false,
     "sitemapSwitcherAuto": false,
@@ -1267,23 +1267,6 @@
           "_global": false,
           "_once": false,
           "_params": {}
-        },
-        {
-          "_customTemplate": true,
-          "_afterNavbarItem": false,
-          "_customHTML": "[JS_CODE_0]",
-          "_customCSS": ".ti-widget {\n    max-width: 1200px;\n    margin: 0 auto;\n    padding: 6rem 30px;\n}",
-          "alias": "code-editor",
-          "_tags": [
-            "Extension"
-          ],
-          "_name": "pro.custom-html",
-          "_sourceTheme": "hotelm4",
-          "_anchor": "custom-html-l",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [
-            "<script defer async src='https://cdn.trustindex.io/loader.js?0f57ddd222b48700e296e6276b4'></script>"
-          ]
         },
         {
           "alias": false,
