@@ -36,7 +36,7 @@
       ]
     },
     "path": "@PROJECT_PATH@",
-    "name": "Loom Suite Ornos",
+    "name": "Loom Suite Ornos Mykonos",
     "versionFirst": "5.9.6",
     "siteFonts": [
       {
@@ -53,7 +53,7 @@
     "imageResize": true,
     "usedWebp": true,
     "favicon": false,
-    "mbrsiteDomain": "papfer8cfj",
+    "mbrsiteDomain": "5bxyz3jxpg",
     "robotsSwitcher": false,
     "sitemapSwitcher": false,
     "sitemapSwitcherAuto": false,
