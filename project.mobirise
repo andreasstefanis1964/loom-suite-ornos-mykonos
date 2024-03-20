@@ -80,7 +80,7 @@
       "rejectText": "REJECT"
     },
     "cookiesAlertType": "1",
-    "uniqCompNum": 43,
+    "uniqCompNum": 44,
     "versionPublish": "5.9.11",
     "screenshot": "screenshot.png",
     "mcSmartCart": {
@@ -515,6 +515,180 @@
           "_sourceTheme": "hotelm4",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@scaleImg)": {
+              ".card .card-img": {
+                "overflow": "hidden",
+                "border-radius": "0",
+                "img": {
+                  "transition": "all 0.5s"
+                },
+                "&:hover": {
+                  "img": {
+                    "-webkit-transform": "scale3d(1.1, 1.1, 1.1)",
+                    "transform": "scale3d(1.1, 1.1, 1.1)"
+                  }
+                }
+              }
+            },
+            ".media-container-column": {
+              "-webkit-justify-content": "flex-start",
+              "justify-content": "flex-start",
+              "padding": "0",
+              "flex-wrap": "nowrap"
+            },
+            ".underline": {
+              ".line": {
+                "width": "2rem",
+                "height": "1px",
+                "background": "@underlineColor",
+                "display": "inline-block"
+              }
+            },
+            ".first-card": {
+              "display": "block",
+              ".card-wrapper": {
+                "height": "100%"
+              },
+              ".card-box": {
+                "background": "@firstBg",
+                "padding": "2rem"
+              },
+              ".info-wrapper": {
+                "display": "inline-flex",
+                "-webkit-align-items": "center",
+                "align-items": "center",
+                ".mbr-iconfont": {
+                  "padding-right": "0.5rem",
+                  "font-size": "20px"
+                },
+                ".info-text": {
+                  "display": "inline-block",
+                  "padding-right": "1rem",
+                  "margin": "0"
+                }
+              },
+              ".card-btn .btn": {
+                "margin-left": "4px !important",
+                "margin-right": "4px !important"
+              }
+            },
+            ".first-row, .second-row": {
+              "-webkit-flex": "1 1 50%",
+              "flex": "1 1 50%",
+              "margin": "0",
+              ".card .card-wrapper": {
+                "overflow": "hidden",
+                "position": "relative",
+                "display": "flex",
+                "-webkit-flex-direction": "column",
+                "flex-direction": "column",
+                "flex": "1",
+                ".card-img": {
+                  "-webkit-flex": "1 1 100%",
+                  "flex": "1 1 100%",
+                  "img": {
+                    "min-height": "100%",
+                    "object-fit": "cover",
+                    "object-position": "center center"
+                  }
+                }
+              },
+              "@media (max-width: 767px)": {
+                "-webkit-flex-basis": "auto",
+                "flex-basis": "auto",
+                ".card .card-wrapper .card-img": {
+                  "-webkit-flex-basis": "auto",
+                  "flex-basis": "auto",
+                  "img": {
+                    "min-height": "0"
+                  }
+                }
+              },
+              ".caption": {
+                "position": "absolute",
+                "bottom": "0",
+                "left": "0",
+                "right": "0",
+                "display": "inline-flex",
+                "-webkit-justify-content": "space-around",
+                "justify-content": "space-around",
+                "-webkit-align-items": "center",
+                "align-items": "center",
+                "letter-spacing": "2px",
+                ".price": {
+                  "background": "@priceBg",
+                  "padding": "0 0.5rem"
+                }
+              }
+            },
+            ".first-row": {
+              "padding-bottom": "1rem"
+            },
+            ".second-row": {
+              "padding-top": "1rem"
+            },
+            "@media (max-width: 767px)": {
+              ".first-card, .first-child": {
+                "padding-bottom": "2rem"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".first-card": {
+                "padding-bottom": "2rem"
+              },
+              ".only-first-row": {
+                "height": "100%"
+              }
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".info-text": {
+              "color": "#000000"
+            },
+            ".card-title": {
+              "color": "#ffffff",
+              "font-size": "20px",
+              "padding": "1rem",
+              "text-align": "center"
+            }
+          },
+          "_name": "features2",
+          "_sourceTheme": "hotelm4",
+          "_customHTML": "<section class=\"mbr-section features2 hotelm4_features2\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n\t\t<input type=\"range\" inline title=\"Cards Count\" name=\"cardsAmount\" min=\"1\" max=\"5\" step=\"1\" value=\"3\">\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Underline\" name=\"showUnderline\" checked condition=\"showSubtitle\">\n\t\t<input type=\"color\" title=\"Underline Color\" name=\"underlineColor\" value=\"#878787\" condition=\"showUnderline && showSubtitle\">\n\n\t\t<input type=\"checkbox\" title=\"Scale Image On Hover\" name=\"scaleImg\" checked>\n\t\t<input type=\"checkbox\" title=\"Card Title\" name=\"showCardTitle\" checked condition=\"cardsAmount > 1\">\n\t\t<input type=\"checkbox\" title=\"Price\" name=\"showPrice\" condition=\"cardsAmount > 1\">\n\t\t<input type=\"color\" title=\"Price BG Color\" name=\"priceBg\" value=\"#c19b76\" condition=\"showPrice &amp;&amp; cardsAmount > 1\">\n\n\t\t<header>First Card Settings</header>\n\t\t<input type=\"checkbox\" title=\"Show Title\" name=\"showFirstTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Show Info\" name=\"showInfo\" checked>\n\t\t<input type=\"checkbox\" title=\"Show Text\" name=\"showFirstText\" checked>\n\t\t<input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\t\t<input type=\"color\" title=\"Background Color\" name=\"firstBg\" value=\"#e6c8ab\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background3.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#d8d7d7\" selected>\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://www.youtube.com/watch?v=2jqUN6d6ZyM\">\n\t\t</fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\n\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n\t\t\n\t</mbr-parameters>\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div class=\"container\">\n\t\t<h3 class=\"mbr-section-subtitle main-subtitle mbr-fonts-style mbr-lighter align-center\" mbr-class=\"{'pb-3': !showUnderline}\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".main-subtitle, .underline\">LOOM LUXURY\n\t\t</h3>\n\n\t\t<div class=\"underline align-center pb-3\" mbr-if=\"showUnderline && showSubtitle\">\n\t\t\t<div class=\"line\"></div>\n\t\t</div>\n\n\t\t<h2 class=\"mbr-section-title main-title mbr-fonts-style align-center pb-5\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".main-title\">Your Loom properties in Mykonos &amp; Athens</h2>\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"card first-card col-12\" mbr-class=\"{'col-lg-8': cardsAmount == 1,\n                            'col-lg-6': cardsAmount > 1}\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img\">\n\t\t\t\t\t\t<a href=\"https://loomsuite-ornos.com\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/naz-3573.webp\" alt=\"Mobirise\"></a>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\" mbr-if=\"showFirstTitle || showInfo || showFirstText || showButtons\">\n\t\t\t\t\t\t<h2 class=\"first-card-title mbr-fonts-style\" mbr-class=\"{'pb-3': !showInfo}\" mbr-theme-style=\"display-5\" mbr-if=\"showFirstTitle\" data-app-selector=\".first-card-title, .first-card-info\">Loom Suite Ornos Mykonos</h2>\n\t\t\t\t\t\t<div class=\"first-card-info pb-3\" mbr-if=\"showInfo\">\n\t\t\t\t\t\t\t<div class=\"info-wrapper\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-user\"></span>\n\t\t\t\t\t\t\t\t<p class=\"mbr-text info-text mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" data-app-selector=\".info-text\">UP To 6 GUESTS</p>\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-home\"></span>\n\t\t\t\t\t\t\t\t<p class=\"mbr-text info-text mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" data-app-selector=\".info-text\">60 SQM.</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<p class=\"mbr-text first-card-text mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-7\" mbr-if=\"showFirstText\" data-app-selector=\".first-card-text, .card-btn\">\n\t\t\t\t\t\t\tThis air-conditioned accommodation is a charming holiday two-bedroom Cycladic house located only 200 meters from Ornos Beach.</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://loomsuite-ornos.com\" class=\"btn btn-md btn-secondary\" data-app-placeholder=\"Type Text\">VISIT HERE</a></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"media-container-column col-lg-6\">\n\t\t\t\t<div class=\"row first-row\" mbr-class=\"{'only-first-row': cardsAmount < 4}\" mbr-if=\"cardsAmount > 1\">\n\t\t\t\t\t<div class=\"card col-sm-12 col-md-6\" mbr-class=\"{'first-child': cardsAmount > 2}\" mbr-if=\"cardsAmount >= 2\">\n\t\t\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t\t\t<div class=\"card-img\">\n\t\t\t\t\t\t\t\t<a href=\"https://villaloom-mykonos.com\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/_nan1974-1080x721.jpg\" alt=\"Mobirise\"></a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-box caption mbr-white\" mbr-if=\"showCardTitle || showPrice\">\n\t\t\t\t\t\t\t\t<p class=\"mbr-text card-title mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">Villa Loom Mykonos</p>\n\t\t\t\t\t\t\t\t<p class=\"mbr-text price mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" mbr-if=\"showPrice\" data-app-selector=\".price\">\n\t\t\t\t\t\t\t\t\tFROM 30$\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card col-sm-12 col-md-6\" mbr-if=\"cardsAmount >= 3\">\n\t\t\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t\t\t<div class=\"card-img\">\n\t\t\t\t\t\t\t\t<a href=\"https://loomsuite-athens.com\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/_dsc9381-hdr-edit-1024x683.jpg\" alt=\"Mobirise\"></a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-box caption mbr-white\" mbr-if=\"showCardTitle || showPrice\">\n\t\t\t\t\t\t\t\t<p class=\"mbr-text card-title mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\t\t\tLoom Suite Athens</p>\n\t\t\t\t\t\t\t\t<p class=\"mbr-text price mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" mbr-if=\"showPrice\" data-app-selector=\".price\">\n\t\t\t\t\t\t\t\t\tFROM 30$\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"row second-row\" mbr-if=\"cardsAmount > 3\">\n\t\t\t\t\t<div class=\"card col-sm-12 col-md-6\" mbr-class=\"{'first-child': cardsAmount > 4}\" mbr-if=\"cardsAmount >= 4\">\n\t\t\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t\t\t<div class=\"card-img\">\n\t\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/03.jpg\" alt=\"Mobirise\">\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-box caption mbr-white\" mbr-if=\"showCardTitle || showPrice\">\n\t\t\t\t\t\t\t\t<p class=\"mbr-text card-title mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\t\t\tLUXURY ROOM\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<p class=\"mbr-text price mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" mbr-if=\"showPrice\" data-app-selector=\".price\">\n\t\t\t\t\t\t\t\t\tFROM 110$\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card col-sm-12 col-md-6\" mbr-if=\"cardsAmount == 5\">\n\t\t\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t\t\t<div class=\"card-img\">\n\t\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/05.jpg\" alt=\"Mobirise\">\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-box caption mbr-white\" mbr-if=\"showCardTitle || showPrice\">\n\t\t\t\t\t\t\t\t<p class=\"mbr-text card-title mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" mbr-if=\"showCardTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\t\t\tAPARTMENT\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t<p class=\"mbr-text price mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-4\" mbr-if=\"showPrice\" data-app-selector=\".price\">\n\t\t\t\t\t\t\t\t\tFROM 90$\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "features2-17",
+          "_isUserblock": true,
+          "_cid": "u7y3qxpWNV",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
